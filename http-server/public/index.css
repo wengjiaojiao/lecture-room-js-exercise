@@ -1,0 +1,24 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+.container {
+    height: 720px;
+    margin: 0 20%;
+}
+.search {
+    margin-top: 0.8%;
+    height: 10.4%;
+    width: 92.5%;
+    margin-left: 3%;
+    background: #F9F9F9;
+}
+.search-frame {
+    margin-top: 2.5%;
+    margin-left: 2.7%;
+    height: 44%;
+    width: 94%;
+    border: none;
+    font-size: 15px;
+    padding-left: 1%;
+}
