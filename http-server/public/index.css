@@ -22,3 +22,19 @@ body {
     font-size: 15px;
     padding-left: 1%;
 }
+.prompt {
+    width: 93%;
+    margin-left: 3%;
+    padding: 0px;
+    margin-top: 0px;
+}
+.prompt li {
+    list-style: none;
+    line-height: 53px;
+    padding-left: 8px;
+    padding-bottom: 13px;
+    padding-top: 11px;
+    color: grey;
+    font-size: 20px;
+    border-bottom: 1px dashed grey;
+}
