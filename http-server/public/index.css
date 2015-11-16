@@ -22,13 +22,13 @@ body {
     font-size: 15px;
     padding-left: 1%;
 }
-.prompt {
+.prompts {
     width: 93%;
     margin-left: 3%;
     padding: 0px;
     margin-top: 0px;
 }
-.prompt li {
+.prompts li {
     list-style: none;
     line-height: 53px;
     padding-left: 8px;
