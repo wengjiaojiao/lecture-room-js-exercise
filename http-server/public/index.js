@@ -1,13 +1,13 @@
 function dataPrinter(data) {
   data.forEach(function(val) {
       $("<li>" + val.title + "</li>").appendTo(".prompts");
-      var localTime = getLocalTime(val.created);
+      var localTime = 'Created @' + getLocalTime(val.created);
       $("<li>" + localTime + "</li>").appendTo(".prompts");
   })
 }
 
 function getLocalTime(timeStamp) {
-   return new Date(parseInt(timeStamp) * 1000).toLocaleString().replace(/:\d{1,2}$/,' ');
+   return new Date(parseInt(timeStamp) * 1000).toLocaleString().replace(/:\d{1,2}$/,' ').match(/^[^\s]*/)[0];
 }
 
 function highLight(idVal,keyword, color) {
