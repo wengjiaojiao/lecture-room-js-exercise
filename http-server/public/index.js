@@ -39,7 +39,7 @@ $.get("./bookmarks.json", function(data) {
             }
         });
         dataPrinter(newData);
-        highLight("prompts", searchText, "red");
+        highLight("prompts", searchText, "#FF1A9E");
 
     });
 });
