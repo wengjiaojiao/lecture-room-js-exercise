@@ -23,6 +23,7 @@ $.get("./bookmarks.json", function(data) {
     dataPrinter(data);
     $(".search-frame").on('keyup',function() {
         var searchText = $('.search-frame').val();
+
         searchText = searchText.toLowerCase();
         var newData = [];
 
