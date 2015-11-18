@@ -23,6 +23,7 @@ $.get("./bookmarks.json", function(data) {
     dataPrinter(data);
     $(".search-frame").on('keyup',function() {
         var searchText = $('.search-frame').val();
+        searchText = searchText.toLowerCase();
         var newData = [];
 
         _.forEach(data, function(val) {
@@ -35,7 +36,7 @@ $.get("./bookmarks.json", function(data) {
                               created: val.created});
             }else{
                 $('.partOne').empty();
-                $('.partTwo').empty();                
+                $('.partTwo').empty();
             }
         });
         dataPrinter(newData);
