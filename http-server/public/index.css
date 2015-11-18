@@ -28,7 +28,15 @@ body {
     padding: 0px;
     margin-top: 0px;
 }
-.prompts li {
+.partOne {
+    float:left;
+    width:80%;
+}
+.partTwo {
+    float:left;
+    width:19%;
+}
+.partOne li {
     list-style: none;
     line-height: 53px;
     padding-left: 8px;
@@ -36,5 +44,16 @@ body {
     padding-top: 11px;
     color: grey;
     font-size: 20px;
+    border-bottom: 1px dashed grey;
+}
+.partTwo li {
+    list-style: none;
+    line-height: 25px;
+    padding-left: 8px;
+    padding-top: 11px;
+    margin-top: 41px;
+    color: grey;
+    font-size: 13px;
+    font-style: italic;
     border-bottom: 1px dashed grey;
 }
