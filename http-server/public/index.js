@@ -1,7 +1,13 @@
 function dataPrinter(data) {
   data.forEach(function(val) {
       $("<li>" + val.title + "</li>").appendTo(".prompts");
+      var localTime = getLocalTime(val.created);
+      $("<li>" + localTime + "</li>").appendTo(".prompts");
   })
+}
+
+function getLocalTime(timeStamp) {
+   return new Date(parseInt(timeStamp) * 1000).toLocaleString().replace(/:\d{1,2}$/,' ');
 }
 
 function highLight(idVal,keyword, color) {
@@ -32,5 +38,6 @@ $.get("./bookmarks.json", function(data) {
         });
         dataPrinter(newData);
         highLight("prompts", searchText, "red");
+
     });
 });
