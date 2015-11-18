@@ -19,29 +19,32 @@ function $ID(idVal) {
     return document.getElementById(idVal);
 }
 
+function getNewData(data, searchText) {
+    var newData = [];
+    var filterDatas = _.filter(data, function(filterData) {
+        var title = filterData.title.toLowerCase();
+
+        return title.indexOf(searchText) !== -1;
+    });
+
+    _.forEach(filterDatas, function(filterData) {
+        newData.push({title: filterData.title,
+                      created: filterData.created});
+    });
+    return newData;
+}
+
 $.get("./bookmarks.json", function(data) {
     dataPrinter(data);
     $(".search-frame").on('keyup',function() {
         var searchText = $('.search-frame').val();
 
         searchText = searchText.toLowerCase();
-        var newData = [];
+        $('.partOne').empty();
+        $('.partTwo').empty();
+        var newData = getNewData(data, searchText);
 
-        _.forEach(data, function(val) {
-            var title = val.title.toLowerCase();
-
-            if(title.indexOf(searchText) !== -1) {
-                $('.partOne').empty();
-                $('.partTwo').empty();
-                newData.push({title: val.title,
-                              created: val.created});
-            }else{
-                $('.partOne').empty();
-                $('.partTwo').empty();
-            }
-        });
         dataPrinter(newData);
         highLight("prompts", searchText, "#FF1A9E");
-
     });
 });
