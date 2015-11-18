@@ -1,8 +1,8 @@
 function dataPrinter(data) {
   data.forEach(function(val) {
-      $("<li>" + val.title + "</li>").appendTo(".prompts");
+      $("<li>" + val.title + "</li>").appendTo(".partOne");
       var localTime = 'Created @' + getLocalTime(val.created);
-      $("<li>" + localTime + "</li>").appendTo(".prompts");
+      $("<li>" + localTime + "</li>").appendTo(".partTwo");
   })
 }
 
@@ -29,11 +29,13 @@ $.get("./bookmarks.json", function(data) {
             var title = val.title.toLowerCase();
 
             if(title.indexOf(searchText) !== -1) {
-                $('.prompts').empty();
+                $('.partOne').empty();
+                $('.partTwo').empty();
                 newData.push({title: val.title,
                               created: val.created});
             }else{
-                $('.prompts').empty();
+                $('.partOne').empty();
+                $('.partTwo').empty();                
             }
         });
         dataPrinter(newData);
