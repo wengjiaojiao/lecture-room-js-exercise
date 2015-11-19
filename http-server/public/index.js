@@ -12,7 +12,8 @@ function getLocalTime(timeStamp) {
 
 function highLight(idVal,keyword, color) {
     var hlValue = new RegExp("(" + keyword + ")(?=[^<>]*<)","gi");
-    $ID(idVal).innerHTML = $ID(idVal).innerHTML.replace(hlValue, "<font color=" + color + ">$1</font>");
+    $ID(idVal).innerHTML = $ID(idVal).innerHTML.replace(hlValue,
+    '<span style="background-color:'+ color +';color:white">'+'$1'+'</span>');
 }
 
 function $ID(idVal) {
