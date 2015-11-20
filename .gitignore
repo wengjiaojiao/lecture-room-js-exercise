@@ -1,2 +1,6 @@
 .DS_Store
 example.jpg
+http-server/test
+http-server/bin
+http-server/lib
+http-server/node_modules
