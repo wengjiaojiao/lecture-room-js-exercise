@@ -1,3 +1,5 @@
 .DS_Store
 example.jpg
 http-server/test
+http-server/.travis.yml
+http-server/LICENSE
