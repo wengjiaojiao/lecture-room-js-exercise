@@ -3,3 +3,7 @@ example.jpg
 http-server/test
 http-server/.travis.yml
 http-server/LICENSE
+http-server/bin
+http-server/lib
+http-server/node_modules
+.npmignore
