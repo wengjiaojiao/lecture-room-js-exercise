@@ -31,7 +31,7 @@ function getNewData(data, searchText) {
     return newData;
 }
 
-$.get("./bookmarks.json", function(data) {
+$.get("./data/bookmarks.json", function(data) {
     dataPrinter(data);
     $(".search-frame").on('keyup',function() {
         var searchText = $('.search-frame').val();
