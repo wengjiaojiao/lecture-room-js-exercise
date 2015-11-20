@@ -33,7 +33,7 @@ function getNewData(data, searchText) {
 
 $.get("./data/bookmarks.json", function(data) {
     dataPrinter(data);
-    $(".search-frame").on('keyup',function() {
+    $(".search-frame").on('input',function() {
         var searchText = $('.search-frame').val();
 
         searchText = searchText.toLowerCase();
