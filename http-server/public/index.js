@@ -10,14 +10,10 @@ function getLocalTime(timeStamp) {
    return new Date(parseInt(timeStamp) * 1000).toLocaleString().replace(/:\d{1,2}$/,' ').match(/^[^\s]*/)[0];
 }
 
-function highLight(idVal,keyword, color) {
-    var hlValue = new RegExp("(" + keyword + ")(?=[^<>]*<)","gi");
-    $ID(idVal).innerHTML = $ID(idVal).innerHTML.replace(hlValue,
+function highLight(idVal,keyWord, color) {
+    var hlValue = new RegExp("(" + keyWord + ")(?=[^<>]*<)","gi");
+    document.getElementById(idVal).innerHTML = document.getElementById(idVal).innerHTML.replace(hlValue,
     '<span style="background-color:'+ color +';color:white">'+'$1'+'</span>');
-}
-
-function $ID(idVal) {
-    return document.getElementById(idVal);
 }
 
 function getNewData(data, searchText) {
